@@ -1,0 +1,6 @@
+<div [formGroup]="form">
+  <input  type="text" placeholder="id" formControlName="id" appEmitFocusBlur [origin]="form.controls['id']">
+  <app-hint *ngFor="let item of errorInfos" [errorMessage]="item.message" [errorCode]="item.errorCode" appSlave [changeClasses]="changecs" [master]="form.controls['id']"></app-hint>
+  <button (click)="onSubmit()" appEmitClick >click</button>
+</div>
+
